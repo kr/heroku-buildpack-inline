@@ -1,0 +1,3 @@
+#!/bin/sh
+# Usage: bin/compile <build-dir> <cache-dir>
+exec "$1"/bin/compile "$@"
