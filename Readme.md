@@ -11,6 +11,8 @@ details about this interface.
 
 Thus, an app serves as its own buildpack.
 
+Phil Hagelberg originated this lovely idea.
+
 ## Usage
 
     $ find . -type f -print
