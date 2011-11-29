@@ -11,4 +11,25 @@ details about this interface.
 
 Thus, an app serves as its own buildpack.
 
+## Usage
+
+    $ find . -type f -print
+    ./bin/compile
+    ./bin/detect
+    ./bin/release
+    ./bin/run
+    ./Procfile
+
+    $ cat Procfile
+    work: bin/run
+
+    $ heroku create -s cedar
+    ...
+
+    $ heroku config:add BUILDPACK_URL=http://github.com/kr/heroku-buildpack-inline.git
+    ...
+
+    $ git push heroku master
+    ...
+
 [buildpack]: http://devcenter.heroku.com/articles/buildpack
