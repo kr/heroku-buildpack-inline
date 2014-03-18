@@ -1,3 +1,6 @@
 #!/bin/sh
 # Usage: bin/release <build-dir>
-exec "$1"/bin/release "$@"
+
+if [ -f "$1"/bin/release ]; then
+  exec "$1"/bin/release "$@"
+fi

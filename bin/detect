@@ -1,3 +1,10 @@
 #!/bin/sh
 # Usage: bin/detect <build-dir>
-exec "$1"/bin/detect "$@"
+
+if [ -f "$1"/bin/detect ]; then
+  exec "$1"/bin/detect "$@"
+elif [ -f "$1"/bin/compile ]; then
+  echo "Inline"
+else
+  exit 1
+fi
