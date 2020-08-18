@@ -25,10 +25,10 @@ Phil Hagelberg originated this lovely idea.
     $ cat Procfile
     work: bin/run
 
-    $ heroku create -s cedar
+    $ heroku create
     ...
 
-    $ heroku config:add BUILDPACK_URL=http://github.com/kr/heroku-buildpack-inline.git
+    $ heroku buildpacks:add -i 1 heroku-community/inline
     ...
 
     $ git push heroku master
